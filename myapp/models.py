@@ -24,6 +24,7 @@ class Product(models.Model):
     Image1 = models.ImageField(upload_to='productpics',blank='True',null='True')
     Image2 = models.ImageField(upload_to='productpics', blank='True', null='True')
     Image3 = models.ImageField(upload_to='productpics', blank='True', null='True')
+    featured_product = models.BooleanField(default=False)
 
     def __str__(self):
         return self.product_name
