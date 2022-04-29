@@ -30,9 +30,11 @@
     <input type="tel" name="tel" placeholder="Mobile:">
     <input type="email" name="email" placeholder="email address:">
     <input type="password" name="pass" placeholder="Password">
-    <input type="submit" name="login" class="login login-submit" value="Create an account">
+    <input type="submit" name="signup" class="login login-submit" value="Create an account">
   </form>
-
+     <div class="login-help">
+        <a href="{% url 'login' %}">Login</a>
+      </div>
 
   </div>
 
