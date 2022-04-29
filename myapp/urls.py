@@ -6,7 +6,7 @@ from myapp import views
 urlpatterns = [
     path('',views.myindex,name='myhome' ),
     path('user_login',views.mylogin,name='login' ),
-    # path('user_sinup',views.mysignup,name='signup' ),
+    path('user_sinup',views.mysignup,name='signup' ),
     # path('computer',views.mycomputer,name='comp' ),
     # path('laptop',views.mylaptop,name='lap' ),
     # path('product',views.myproduct,name='pro' ),

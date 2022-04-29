@@ -10,9 +10,9 @@ def myindex(request):
 def mylogin(request):
     return render(request,'login.html')
 
-# def mysignup(request):
-#     return render(request,'signup.html')
-#
+def mysignup(request):
+    return render(request,'signup.html')
+
 # def mycomputer(request):
 #     return render(request,'computer.html')
 #
