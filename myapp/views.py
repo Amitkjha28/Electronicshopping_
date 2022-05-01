@@ -2,10 +2,14 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+from myapp.models import Category
 
 
 def myindex(request):
-    return render(request,'index.html')
+    category_data = Category.objects.all()
+    print(category_data)
+    return render(request,'index.html',{"categorydata" : category_data})
+
 
 def mylogin(request):
     return render(request,'login.html')

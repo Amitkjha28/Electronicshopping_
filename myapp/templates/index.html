@@ -5,33 +5,25 @@
 
 
       <!-- three_box -->
+      {% if categorydata %}
+      {% for data in categorydata %}
       <div class="three_box">
          <div class="container">
             <div class="row">
                <div class="col-md-4">
                   <div class="box_text">
-                     <i><img src="{% static 'images/thr.png' %}" alt="#"/></i>
-                     <h3>Computer</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="box_text">
-                     <i><img src="{% static 'images/thr1.png' %}" alt="#"/></i>
-                     <h3>Laptop</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="box_text">
-                     <i><img src="{% static 'images/thr2.png' %}" alt="#"/></i>
-                     <h3>Tablet</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                     <i><img src="{{ data.category_image.url } }" alt=""/></i>
+                     <h3>{{ data.category_name }}</h3>
+                     <p> Get the best deal </p>
                   </div>
                </div>
             </div>
          </div>
       </div>
+      {% endfor %}
+      {% else %}
+       <h1> No categories added yet</h1>
+      {% endif %}
       <!-- three_box -->
       <!-- products -->
       <div  class="products">
